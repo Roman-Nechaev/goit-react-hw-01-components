@@ -8,20 +8,30 @@ import data from 'data/data.json';
 import friends from 'data/friends.json';
 import transactions from 'data/transactions.json';
 
+import { Container, Section } from './App.styled';
+
 export const App = () => {
   return (
-    <div>
-      <Profile
-        username={user.username}
-        tag={user.tag}
-        location={user.location}
-        avatar={user.avatar}
-        stats={user.stats}
-      />
-      <Statistics title="Upload stats" stats={data} />
-      <Statistics stats={data} />
-      <FriendList friends={friends} />
-      <TransactionHistory items={transactions} />
-    </div>
+    <Container>
+      <Section>
+        <Profile
+          username={user.username}
+          tag={user.tag}
+          location={user.location}
+          avatar={user.avatar}
+          stats={user.stats}
+        />
+      </Section>
+      <Section>
+        <Statistics title="Upload stats" stats={data} />
+        <Statistics stats={data} />
+      </Section>
+      <Section>
+        <FriendList friends={friends} />
+      </Section>
+      <Section>
+        <TransactionHistory items={transactions} />
+      </Section>
+    </Container>
   );
 };
