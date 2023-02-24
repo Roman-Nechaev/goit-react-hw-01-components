@@ -8,10 +8,11 @@ import {
   Label,
   Percentage,
 } from './Statistics.styled';
+
 export const Statistics = ({ title, stats }) => {
   return (
     <StatisticsWrap>
-      {title && <Title className="title">{title}</Title>}
+      {title && <Title>{title}</Title>}
       <StatList>
         {stats.map(({ id, label, percentage }) => (
           <StatListItem eventPercentage={percentage} key={id}>

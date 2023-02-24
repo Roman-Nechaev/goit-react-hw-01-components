@@ -10,8 +10,8 @@ import {
   ProfileStatsItem,
   Label,
   Quantity,
-  Avatar,
   AvatarWrap,
+  Avatar,
 } from './Profile.styled';
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
@@ -19,12 +19,7 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
     <ProfileWrap>
       <Description>
         <AvatarWrap>
-          <Avatar
-            src={avatar}
-            alt="User avatar"
-            className="avatar"
-            width="250"
-          />{' '}
+          <Avatar src={avatar} alt="User avatar" width="250" />{' '}
         </AvatarWrap>
         <ProfileName>{username}</ProfileName>
         <ProfileTag>@{tag}</ProfileTag>

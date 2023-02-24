@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
 
+import { upperCaseItem } from '../utils';
+
 import {
   TransactionHistoryWrap,
   StyleTR,
@@ -7,6 +9,7 @@ import {
   StyleTbody,
   StyleTD,
   StyleTHEAD,
+  StyleTRTbody,
 } from './TransactionHistory.stuled';
 
 export const TransactionHistory = ({ items }) => {
@@ -21,11 +24,11 @@ export const TransactionHistory = ({ items }) => {
       </StyleTHEAD>
       <StyleTbody>
         {items.map(({ id, type, amount, currency }) => (
-          <StyleTR key={id}>
-            <StyleTD>{type}</StyleTD>
+          <StyleTRTbody key={id}>
+            <StyleTD>{upperCaseItem(type)}</StyleTD>
             <StyleTD>{amount}</StyleTD>
             <StyleTD>{currency}</StyleTD>
-          </StyleTR>
+          </StyleTRTbody>
         ))}
       </StyleTbody>
     </TransactionHistoryWrap>

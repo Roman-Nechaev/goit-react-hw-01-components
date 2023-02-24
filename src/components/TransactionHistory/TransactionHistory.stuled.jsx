@@ -1,35 +1,45 @@
 import styled from '@emotion/styled';
 
 export const TransactionHistoryWrap = styled.table`
-  /* border: 1px solid #ccc; */
-  /* background-color: #01bbd6; */
-  border-radius: 8px;
-  table-layout: fixed;
-  border-spacing: 3px;
+  margin: 0 auto;
 
+  table-layout: fixed;
   width: 500px;
 
-  margin: 0 auto;
-`;
+  border-collapse: collapse;
+  border: 1px solid #c5c5c5;
+  border-radius: 8px;
 
-export const StyleTHEAD = styled.thead`
+  overflow: hidden;
+  box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2);
   background-color: #01bbd6;
 `;
 
+export const StyleTHEAD = styled.thead``;
+
+export const StyleTR = styled.tr``;
+
 export const StyleTH = styled.th`
-  color: #ffffff;
   padding: 10px;
-`;
 
-export const StyleTR = styled.tr`
-  /* color: tomato; */
+  border: 1px solid #ffffff;
 
-  /* background-color: #01bbd6; */
-  /* border: 1px solid #ccc; */
+  color: #ffffff;
 `;
 
 export const StyleTbody = styled.tbody`
   text-align: center;
 `;
 
-export const StyleTD = styled.td``;
+export const StyleTRTbody = styled.tr`
+  background-color: #ffffff;
+
+  &:not(:nth-of-type(2n-1)) {
+    background-color: #ebecec;
+  }
+`;
+export const StyleTD = styled.td`
+  padding: 15px;
+
+  border: 1px solid #c5c5c5;
+`;

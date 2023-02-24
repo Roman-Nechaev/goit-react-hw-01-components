@@ -6,7 +6,7 @@ import { FriendListWrap } from './FriendList.styled';
 
 export const FriendList = ({ friends }) => {
   return (
-    <FriendListWrap className="friend-list">
+    <FriendListWrap>
       {friends.map(({ id, avatar, name, isOnline }) => (
         <FriendListItem
           key={id}
